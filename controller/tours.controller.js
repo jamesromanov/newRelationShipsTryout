@@ -28,8 +28,8 @@ let addTours = errorHandler(async (req, res, next) => {
 });
 let getToursById = errorHandler(async (req, res, next) => {
   let id = req.params.id;
-  let tour = await Tours.findById(id);
-  if (!tour) response(res, "user not found!", 404);
+  let tour = await Tours.findById(id).populate("guides");
+  if (!tour) throw new Error("user not found");
   response(res, tour, 200);
 });
 let deleteTours = errorHandler(async (req, res, next) => {

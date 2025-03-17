@@ -6,7 +6,7 @@ const guidesRouter = require("../routes/guides.router");
 
 const app = express();
 app.use(express.json());
-app.use(middErr);
+// app.use(middErr);
 app.use("/tours", tourRouter);
 app.use("/bookings", bookingRouter);
 app.use("/guides", guidesRouter);

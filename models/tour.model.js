@@ -5,7 +5,9 @@ let tourSchema = new mongoose.Schema({
   description: { type: String, default: "its good trip!" },
   price: { type: Number, required: true, min: 200, max: 100000 },
   location: { type: String, required: true, minLength: 5, maxLength: 20 },
-  guides: [{ type: String, required: true }],
+  guides: [
+    { type: mongoose.Schema.Types.ObjectId, required: true, ref: "guides" },
+  ],
 });
 
 let Tours = mongoose.model("tours", tourSchema);

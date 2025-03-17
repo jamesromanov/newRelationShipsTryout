@@ -17,7 +17,8 @@ let addGuides = errorHandler(async (req, res, next) => {
 });
 let getGuidesById = errorHandler(async (req, res, next) => {
   let id = req.params.id;
-  let guide = await Guides.findById(id);
+  let guide = await Guides.findById(id).populate("tours");
+  if (!guide) throw new Error("user not found!");
   response(res, guide);
 });
 let deleteGuide = errorHandler(async (req, res, next) => {

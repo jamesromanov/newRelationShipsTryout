@@ -16,9 +16,8 @@ let addBookings = errorHandler(async (req, res, next) => {
 });
 let getBookingsById = errorHandler(async (req, res, next) => {
   let id = req.params.id;
-  let booking = await Bookings.findById(id);
-  if (!booking) response(res, "booking not found", 404);
-  else response(res, booking);
+  let booking = await Bookings.findById(id).populate("tour_id");
+  response(res, booking);
 });
 let deleteBooking = errorHandler(async (req, res, next) => {
   let id = req.params.id;

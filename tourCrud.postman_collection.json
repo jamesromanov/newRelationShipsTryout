@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "6ac62d8a-e719-4897-81eb-a829cd2fac56",
+		"name": "tourCrud",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41717468"
+	},
+	"item": [
+		{
+			"name": "getTourById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tours/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tours",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7f2afc407600588918b80"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addTours",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Hawai orollari sayohati\",\r\n\"description\": \"5 yulduzli\",\r\n\"price\": 300,\r\n\"location\": \"United States\",\r\n\"guides\": [\"65f1a3b4c9e77b3f33d4e9c9\", \"65f1a3b4c9e77b3f33d4e9d0\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tours",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tours"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateToursById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n     \"name\" : \"somewhere in this wolrd\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/tours/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tours",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7d5f30a20f4758af44d37"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteToursById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/tours/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"tours",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7d5f30a20f4758af44d37"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addBooking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"user_name\": \"Javohir Tursunov\",\r\n\"tour_id\": \"65f1a3b4c9e77b3f33d4e9d5\",\r\n\"date\": \"2025-04-01\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookingsById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bookings/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7f411d73d427cdc6b0d6c"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateBookingById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"something\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/bookings/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7e7a6e5cd8fb52d28d786"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteBookingsById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/bookings/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"bookings",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7e7a6e5cd8fb52d28d786"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGuidesById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/guides/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"guides",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7f359c407600588918b84"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteGuidesById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/guides/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"guides",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7ee6162e3534f1cfd6706"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateGuideById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"something\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/guides/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"guides",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7ee6162e3534f1cfd6706"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addGuides",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"name\": \"Otabek Xolmatov\",\r\n\"experience\": 5,\r\n\"phone\": \"+998901234567\",\r\n\"tours\": [\"65f1a3b4c9e77b3f33d4e9d5\"]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/guides",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"guides"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getGuidesById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/guides/:id",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"guides",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "67d7f359c407600588918b84"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
